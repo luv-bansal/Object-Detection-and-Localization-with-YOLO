@@ -45,9 +45,9 @@ fourcc=cv.vedioWriter_fourcc(*'XVID')
 width=cam.get(cv.CAP_PROP_FRAME_WIDTH)
 height=cam.get(cv.CAP_PROP_FRAME_HEIGHT)
 writter=cv.vedioWriter('outputavi',fourcc,20,(width,height))
-weights='C:\ML\Darknet\darknet\yolov3.weights'
-config='C:\ML\Darknet\darknet\cfg\yolov3.cfg'
-class_labels='C:\ML\Darknet\darknet\data\coco.names'
+weights='yolov3.weights'
+config='yolov3.cfg'
+class_labels='coco.names'
 iou_thresh=0.4
 with open(class_labels, 'r') as f:
     class_labels= [line.strip() for line in f.readlines()]
